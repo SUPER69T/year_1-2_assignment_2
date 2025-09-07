@@ -26,6 +26,5 @@ public class MainPublication1 {
         publications[9]=new Journal("Nature","Springer Nature",
                 5,  590,2021 );
 
-
     }
 }
