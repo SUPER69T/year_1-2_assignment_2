@@ -18,11 +18,16 @@ public class Publication {
     public int getQty() {return qty;}
     //
 
-    public boolean equals(Publication old_pub){
-        return (this.title.equals(old_pub.title) && (this.publication.equals(old_pub.publication))) && (this.qty == old_pub.qty);
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Publication) {
+            Publication pub = (Publication) obj;
+            return this.getPublication().equals(pub.getTitle()) && this.getPublication().equals(pub.getPublication()) && this.getQty() == pub.getQty();
+        }
+        return false;
     }
     @Override
     public String toString(){
-        return "Title: " + title + ", Publication: " + publication + ", Qty: " + qty;
+        return "Title: " + this.getTitle() + ", Publication: " + this.getPublication() + ", Qty: " + this.getQty();
     }
 }

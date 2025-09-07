@@ -13,10 +13,10 @@ public class Author {
     //
 
     public boolean equals(Author old_author) {
-        return this.name.equals(old_author.name) && this.email.equals(old_author.email);
+        return this.getName().equals(old_author.getName()) && this.getEmail().equals(old_author.getEmail());
     }
 
     public String toString() {
-        return "Name: " + name + ", Email: " + email;
+        return "Name: " + this.getName() + ", Email: " + this.getEmail();
     }
 }

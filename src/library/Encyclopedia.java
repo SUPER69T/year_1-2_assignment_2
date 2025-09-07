@@ -13,11 +13,17 @@ public class Encyclopedia extends Publication {
     public int getVolume() {return volume;}
     //
 
-    public boolean equals(Encyclopedia old_encyclopedia){
-        return this.editor.equals(old_encyclopedia.getEditor()) && this.volume == old_encyclopedia.getVolume();
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Encyclopedia) {
+            Encyclopedia old_encyclopedia = (Encyclopedia) obj;
+            return this.getEditor().equals(old_encyclopedia.getEditor()) && this.getVolume() == old_encyclopedia.getVolume();
+        }
+        return false;
     }
 
+    @Override
     public String toString(){
-        return "Editor: " + editor + ", Volume: " + volume;
+        return "Editor: " + this.getEditor() + ", Volume: " + this.getVolume();
     }
 }

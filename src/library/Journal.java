@@ -13,11 +13,17 @@ public class Journal extends Publication{
     public int getYear_of_publication() {return year_of_publication;}
     //
 
-    public boolean equals(Journal old_journal){
-        return old_journal.getIssue_Number() == this.getIssue_Number() && old_journal.getYear_of_publication() == this.getYear_of_publication();
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Journal) {
+            Journal old_journal = (Journal) obj;
+            return this.getIssue_Number() == old_journal.getIssue_Number() && this.getYear_of_publication() == old_journal.getYear_of_publication();
+        }
+        return false;
     }
 
+    //@Override
     public String toString(){
-        return "Issue Number: " + issue_Number + ", Year of publication: " + year_of_publication;
+        return "Issue Number: " + this.getIssue_Number() + ", Year of publication: " + this.getYear_of_publication();
     }
 }

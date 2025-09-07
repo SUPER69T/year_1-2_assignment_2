@@ -16,11 +16,16 @@ public class Book extends Publication {
     public int getYear_of_publication() {return year_of_publication;}
     //
 
-    public boolean equals(Book old_book) {
-        return this.author.equals(old_book.getAuthor()) && this.editor.equals(old_book.getEditor()) && this.year_of_publication == old_book.year_of_publication;
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Book) {
+            Book old_book = (Book) obj;
+            return this.getAuthor().equals(old_book.getAuthor()) && this.getEditor().equals(old_book.getEditor()) && this.getYear_of_publication() == old_book.getYear_of_publication();
+        }
+        return false;
     }
 
     public String toString() {
-        return "Author: " + author + ", Editor: " + editor + ", Year of publication: " + year_of_publication;
+        return "Author: " + this.getAuthor() + ", Editor: " + this.getEditor() + ", Year of publication: " + this.getYear_of_publication();
     }
 }
