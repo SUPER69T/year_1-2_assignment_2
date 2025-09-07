@@ -1,8 +1,6 @@
 /*
 package library;
 
-
-
 public class MainStudents {
     public static void main(String[] args) {
         Student[] students = new Student[100];

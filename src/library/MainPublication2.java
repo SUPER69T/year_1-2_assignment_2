@@ -1,14 +1,8 @@
 /*
 package library;
 
-
-
-
 public class MainPublication2 {
-
-
     public static void main(String[] args) {
-
         Publication[] publications = new Publication[100];
         Author[] authors = new Author[100];
         authors[0] = new Author("Harper Lee","harper@somwhere.com");

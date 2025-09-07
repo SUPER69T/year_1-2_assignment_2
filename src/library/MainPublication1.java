@@ -1,7 +1,6 @@
 package library;
 
 public class MainPublication1 {
-
     public static void main(String[] args) {
         Publication[] publications = new Publication[100];
         Author[] authors = new Author[100];
