@@ -26,6 +26,7 @@ public class Book extends Publication {
     }
 
     public String toString() {
-        return this.getTitle() + " by " + this.getAuthor().getName() + " at " + this.getAuthor().getEmail() + " published by " + this.getPublication() + " edited by " + this.getEditor() + "(" + this.getYear_of_publication() + ")";
+        String spaces = " ".repeat(22);
+        return "'" + this.getTitle() + "' by " + this.getAuthor().getName() + " at " + this.getAuthor().getEmail() + ",\n" + spaces + "published by " + this.getPublication() + ", edited by " + this.getEditor() + "(" + this.getYear_of_publication() + ")";
     }
 }

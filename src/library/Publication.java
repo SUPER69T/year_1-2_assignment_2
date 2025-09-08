@@ -18,8 +18,9 @@ public class Publication {
     public String getPublication() {return publication;}
     public int getQty() {return qty;}
     public int getDef_id() {return def_id;}
+    public String getName() {return title;}
     public String getType() {
-        if (this instanceof Book) return "Book:            ";
+        if (this instanceof Book) return "Book:           ";
         else if (this instanceof  Journal) return "Journal:         ";
         else if (this instanceof Encyclopedia) return "Encyclopedia:    ";
         else return "Publication";

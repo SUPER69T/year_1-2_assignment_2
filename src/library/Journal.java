@@ -24,6 +24,7 @@ public class Journal extends Publication{
 
     //@Override
     public String toString(){
-        return "Year of publication: " + this.getYear_of_publication() + "(" + this.getIssue_Number() + ")";
+        String spaces = " ".repeat(22);
+        return this.getTitle() + "(" + this.getIssue_Number() + "),\n" + spaces + "published by " + this.getPublication() + "(" + this.getYear_of_publication() + ")";
     }
 }
