@@ -26,5 +26,9 @@ public class MainPublication1 {
         publications[9]=new Journal("Nature","Springer Nature",
                 5,  590,2021 );
 
+        System.out.println("List of publication in the order they were entered: \n");
+        for(int i = 0 ; i < publications.length ; i++){
+
+        }
     }
 }
