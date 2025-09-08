@@ -24,6 +24,6 @@ public class Journal extends Publication{
 
     //@Override
     public String toString(){
-        return "Issue Number: " + this.getIssue_Number() + ", Year of publication: " + this.getYear_of_publication();
+        return "Year of publication: " + this.getYear_of_publication() + "(" + this.getIssue_Number() + ")";
     }
 }

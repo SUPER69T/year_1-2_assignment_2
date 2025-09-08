@@ -16,7 +16,7 @@ public class Book extends Publication {
     public int getYear_of_publication() {return year_of_publication;}
     //
 
-    @Override
+    //@Override
     public boolean equals(Object obj) {
         if (obj instanceof Book) {
             Book old_book = (Book) obj;
@@ -26,6 +26,6 @@ public class Book extends Publication {
     }
 
     public String toString() {
-        return "Author: " + this.getAuthor() + ", Editor: " + this.getEditor() + ", Year of publication: " + this.getYear_of_publication();
+        return this.getTitle() + " by " + this.getAuthor().getName() + " at " + this.getAuthor().getEmail() + " published by " + this.getPublication() + " edited by " + this.getEditor() + "(" + this.getYear_of_publication() + ")";
     }
 }

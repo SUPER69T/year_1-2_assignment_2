@@ -24,6 +24,7 @@ public class Encyclopedia extends Publication {
 
     @Override
     public String toString(){
-        return "Editor: " + this.getEditor() + ", Volume: " + this.getVolume();
+        if(this.getEditor() == "") return "edited by unknown." + "Vol. " + this.getVolume();
+        return "Editor: " + this.getEditor() + ", Vol. " + this.getVolume();
     }
 }
