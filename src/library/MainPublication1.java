@@ -28,7 +28,8 @@ public class MainPublication1 {
 
         System.out.println("List of publication in the order they were entered: \n");
         for(int i = 0 ; i < publications.length ; i++){
-
+            if(publications[i] == null) break;
+            System.out.println(publications[i].getDef_id() + " - " + publications[i].getClass().asSubclass() + publications[i].toString());
         }
     }
 }
