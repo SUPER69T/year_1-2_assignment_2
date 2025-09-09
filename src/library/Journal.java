@@ -22,7 +22,7 @@ public class Journal extends Publication{
         return false;
     }
 
-    //@Override
+    @Override
     public String toString(){
         String spaces = " ".repeat(22);
         return this.getTitle() + "(" + this.getIssue_Number() + "),\n" + spaces + "published by " + this.getPublication() + "(" + this.getYear_of_publication() + ")";

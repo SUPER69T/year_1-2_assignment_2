@@ -21,6 +21,7 @@ public class Publication {
     public String getName() {return title;}
     public String getType() {
         if (this instanceof Book) return "Book:           ";
+        else if (this instanceof Article) return "Article:        ";
         else if (this instanceof  Journal) return "Journal:         ";
         else if (this instanceof Encyclopedia) return "Encyclopedia:    ";
         else return "Publication";
@@ -35,6 +36,7 @@ public class Publication {
         }
         return false;
     }
+
     @Override
     public String toString(){
         return "Title: " + this.getTitle() + ", Publication: " + this.getPublication() + ", Qty: " + this.getQty();
