@@ -19,7 +19,7 @@ public class Publication {
     public int getQty() {return qty;}
     public int getDef_id() {return def_id;}
     public String getName() {return title;}
-    public String getType() {
+    public String getType_str() {
         if (this instanceof Book) return "Book:           ";
         else if (this instanceof Article) return "Article:        ";
         else if (this instanceof  Journal) return "Journal:         ";

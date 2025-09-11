@@ -25,11 +25,13 @@ public class MainPublication2 {
         publications[11]=new Encyclopedia("Encyclopedia Britannica", "Encyclopedia Britannica, Inc.", 1, "",2);
         publications[12]=new Journal("Nature","Springer Nature", 5,  590,2021 );
 
+        //סעיפים ד-ה'
         System.out.println("List of publication in the order they were entered: \n");
         for(int i = 0 ; i < publications.length ; i++){
             if(publications[i] == null) break;  //assuming that all variables are being inputted in order.
-            System.out.println(publications[i].getDef_id() + " - " + publications[i].getType() +publications[i].toString() + ".\n");
+            System.out.println(publications[i].getDef_id() + " - " + publications[i].getType_str() +publications[i].toString() + ".\n");
         }
+        //
     }
 
 }
