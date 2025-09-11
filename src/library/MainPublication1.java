@@ -26,7 +26,7 @@ public class MainPublication1 {
         System.out.println("List of publication in the order they were entered: \n");
         for(int i = 0 ; i < publications.length ; i++){
             if(publications[i] == null) break;  //assuming that all variables are being inputted in order.
-            System.out.println(publications[i].getDef_id() + " - " + publications[i].getType_str() +publications[i].toString() + ".\n");
+            System.out.println(publications[i].getDef_id() + " - " + publications[i].getType_print() +publications[i].toString() + ".\n");
         }
         //
     }

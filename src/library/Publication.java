@@ -19,12 +19,19 @@ public class Publication {
     public int getQty() {return qty;}
     public int getDef_id() {return def_id;}
     public String getName() {return title;}
-    public String getType_str() {
+    public String getType_print() {
         if (this instanceof Book) return "Book:           ";
         else if (this instanceof Article) return "Article:        ";
         else if (this instanceof  Journal) return "Journal:         ";
         else if (this instanceof Encyclopedia) return "Encyclopedia:    ";
         else return "Publication";
+    }
+    public char getType_char() {
+        if (this instanceof Book) return 'B';
+        else if (this instanceof Article) return 'A';
+        else if (this instanceof  Journal) return 'J';
+        else if (this instanceof Encyclopedia) return 'E';
+        else return 'P';
     }
     //
 
