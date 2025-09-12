@@ -14,9 +14,9 @@ public class Student {
     }
 
     //getters:
-    public String getStudentName() {return this.StudentName;}
-    public int getStudentId() {return this.def_id;}
-    public int getLoanedNum() {return this.loanedNum;}
+    public String getStudentName() {return StudentName;}
+    public int getStudentId() {return def_id;}
+    public int getLoanedNum() {return loanedNum;}
     //
 
     @Override

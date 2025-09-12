@@ -19,6 +19,7 @@ public class Publication {
     public String getPublication() {return publication;}
     public int getQty() {return qty;}
     public int getDef_id() {return def_id;}
+    public static int getLastID() {return Pub_def_id;}
     public String getName() {return title;}
     public String getType_print() {
         if (this instanceof Book) return "Book:           ";
