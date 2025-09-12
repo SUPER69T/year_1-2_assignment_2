@@ -1,4 +1,3 @@
-/*
 package library;
 
 public class MainStudents {
@@ -12,4 +11,3 @@ public class MainStudents {
     }
 
 }
-*/
