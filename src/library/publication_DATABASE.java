@@ -32,7 +32,12 @@ public class publication_DATABASE {
     //getters:
     public static int get_Arr_Length() {return publications.length;}
     public static Publication[] get_Publications_Arr() {return publications;}
-    //public static Publication get_Publication_By_ID(int publication_ID) {return publications[publication_ID];}
+    public static Publication get_Publication_By_ID(int publication_ID) {
+        for(Publication p : publications) {
+            if(p.getThis_id() == publication_ID) {return p;}
+        }
+        return null;
+    }
     public static Publication get_Publication_By_Index(int Index) {return publications[Index];}
     public static int get_Last_ID__from_DATABASE(){return Publication.getLastID();}
     //

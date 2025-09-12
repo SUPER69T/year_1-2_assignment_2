@@ -18,25 +18,25 @@ public class Student {
     public String getStudentName() {return StudentName;}
     public int getStudentId() {return def_id;}
     public int getLoanedNum() {return loanedNum;}
+    public Publication[] getborrowed_Publications() {return borrowed_Publications;}
     //
 
     //setters:
      public void setLoanedNum(int loanedNum) {this.loanedNum = loanedNum;}
+    public void setborrowed_Publications(Publication[] borrowed_Publications) {this.borrowed_Publications = borrowed_Publications;}
     //
-    public void loan_Publication(Publication publication) {
-        if (this.getLoanedNum() >= 3) {  //checking that the student hasn't loaned more than 2 books.
-            System.out.println("You have exceeded the limit of owned publications.");
-        }
-        else if(publication.getQty() <= 0) {  //checking that the Publication quantity is at least 1.
-            System.out.println("You have exceeded the limit of owned publications.");
-        }
+    public int loan_Publication(Publication publication) {
+        if (this.getLoanedNum() >= 3) {return 1;}  //checking that the student hasn't loaned more than 2 books.
+        else if(publication.getQty() <= 0) {return 2;}  //checking that the Publication quantity is at least 1.
         else if(getLoanedNum() == 0) {
-            borrowed_Publications = new Publication[]{publication};
+            setborrowed_Publications(new Publication[]{publication});
             setLoanedNum(this.getLoanedNum() + 1);
+            return 0;
         }
         else {
-            borrowed_Publications = PublicationUtils.add_Publication(borrowed_Publications, publication);
+            setborrowed_Publications(PublicationUtils.add_Publication(getborrowed_Publications(), publication));
             setLoanedNum(this.getLoanedNum() + 1);
+            return 0;
         }
     }
 
