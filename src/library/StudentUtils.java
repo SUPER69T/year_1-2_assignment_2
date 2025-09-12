@@ -7,9 +7,8 @@ public class StudentUtils {
             if(student == null) break;
             actual_Arr_Length++;
         }
-        Student[] students_Arr = new Student[actual_Arr_Length];
         for(int i = 0; i < actual_Arr_Length; i++) {
-
+            System.out.println(students[i]);
         }
     }
 }

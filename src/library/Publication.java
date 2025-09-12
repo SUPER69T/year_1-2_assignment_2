@@ -13,6 +13,7 @@ public class Publication {
         Pub_def_id++;
         this.def_id = Pub_def_id;
     }
+
     //getters:
     public String getTitle() {return title;}
     public String getPublication() {return publication;}
