@@ -1,5 +1,7 @@
 package library;
 
+import com.sun.source.tree.BreakTree;
+
 public class PublicationUtils {
     public static Publication[] sort_Publications_Arr(Publication[] pub_Array) {
         int actual_Arr_Length = 0;
@@ -47,6 +49,13 @@ public class PublicationUtils {
                 new_Index++;
             }
         }
+        return new_Pub_Array;
+    }
+    public static Publication[] add_Publication(Publication[] pub_Array, Publication publication) {
+        Publication[] new_Pub_Array = new Publication[pub_Array.length + 1];
+        System.arraycopy(pub_Array, 0, new_Pub_Array, 0, pub_Array.length);
+        new_Pub_Array[pub_Array.length] = publication;
+        publication.setQty(publication.getQty() - 1);  //removing one from the library's Publication.Qty count.
         return new_Pub_Array;
     }
 }
