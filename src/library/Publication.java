@@ -37,9 +37,10 @@ public class Publication {
     }
     //
 
-    //
+    //setters:
     public void setQty(int qty) {this.qty = qty;}
     //
+
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Publication) {

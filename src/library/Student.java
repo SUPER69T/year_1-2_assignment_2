@@ -20,10 +20,19 @@ public class Student {
     public int getLoanedNum() {return loanedNum;}
     //
 
+    //setters:
+     public void setLoanedNum(int loanedNum) {this.loanedNum = loanedNum;}
+    //
     public void loan_Publication(Publication publication) {
-        if (this.getLoanedNum() < 3 && publication.getQty() > 0) {  //checking that the student hasn't loaned more than 2 books and that the Publication quantity is at least 1.
-            PublicationUtils.add_Publication(borrowed_Publications, publication);
-            this.loanedNum++;
+        if (this.getLoanedNum() >= 3) {  //checking that the student hasn't loaned more than 2 books.
+            System.out.println("You have exceeded the limit of owned publications.");
+        }
+        else if(publication.getQty() <= 0) {  //checking that the Publication quantity is at least 1.
+            System.out.println("You have exceeded the limit of owned publications.");
+        }
+        else {
+            borrowed_Publications = PublicationUtils.add_Publication(borrowed_Publications, publication);
+            setLoanedNum(this.getLoanedNum() + 1);
         }
     }
 
