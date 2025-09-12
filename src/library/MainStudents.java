@@ -86,7 +86,7 @@ public class MainStudents {
                     continue;
         }
             System.out.println("Loan Report:\nStudent ID:" + student_ID_input + "." + " ".repeat(7) + "Loaned by: " + students[student_ID_input].getStudentName() + ", Currently loaning: " + students[student_ID_input].getLoanedNum() + ".");
-            System.out.println("You have successfully loaned:\n" + publication_ID + "-" + current_Pub.getType_print() + current_Pub.getName() + " Quantity: " + current_Pub.getQty() + "-left.");
+            System.out.println("\nYou have successfully loaned:\n" + publication_ID + "-" + current_Pub.getType_print() + current_Pub.getName() + ", Quantity: " + current_Pub.getQty() + "-left.\n\nredirecting back to the menu:\n");
         }
     }
 }
