@@ -1,7 +1,5 @@
 package library;
 
-import java.util.Arrays;
-
 public class MainPublication2 {
     public static void main(String[] args) {
         Publication[] publications = new Publication[100];
@@ -28,15 +26,20 @@ public class MainPublication2 {
         publications[12] = new Journal("Nature", "Springer Nature", 5, 590, 2021);
 
         //סעיפים ד-ה'
-        System.out.println("List of publication in the order they were entered: \n");
+        System.out.println("List of publications in the order they were entered: \n");
         for (int i = 0; i < publications.length; i++) {
             if (publications[i] == null) break;  //assuming that all variables are being inputted in order.
             System.out.println(publications[i].getDef_id() + " - " + publications[i].getType_print() + publications[i].toString() + ".\n");
         }
         //
 
+        //סעיף ו'
         Publication[] new_Sorted_Array = PublicationUtils.sort_Publications_Arr(publications);
-        System.out.println(Arrays.toString(new_Sorted_Array));
+        System.out.println("List of sorted publications: \n");
+        for (Publication publication : new_Sorted_Array) {
+            System.out.println(publication.getDef_id() + " - " + publication.getType_print() + publication.toString() + ".\n");
+        }
+        //
     }
 
 }
