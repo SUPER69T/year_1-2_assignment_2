@@ -1,8 +1,9 @@
 package library;
 
 public class MainPublication2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {  //...Students class requires access to the Publication[]publications array while the MainPublication2 class is initially being declared 'VOID'. I had to change that in order for the assignment to have a solution.
         Publication[] publications = new Publication[100];
+
         Author[] authors = new Author[100];
         authors[0] = new Author("Harper Lee", "harper@somwhere.com");
         authors[1] = new Author("F. Scott Fitzgerald", "scott@somwhere.com");
@@ -29,7 +30,7 @@ public class MainPublication2 {
         System.out.println("List of publications in the order they were entered: \n");
         for (int i = 0; i < publications.length; i++) {
             if (publications[i] == null) break;  //assuming that all variables are being inputted in order.
-            System.out.println(publications[i].getDef_id() + " - " + publications[i].getType_print() + publications[i].toString() + ".\n");
+            System.out.println(publications[i].getThis_id() + " - " + publications[i].getType_print() + publications[i].toString() + ".\n");
         }
         //
 
@@ -37,7 +38,7 @@ public class MainPublication2 {
         Publication[] new_Sorted_Array = PublicationUtils.sort_Publications_Arr(publications);
         System.out.println("List of sorted publications: \n");
         for (Publication publication : new_Sorted_Array) {
-            System.out.println(publication.getDef_id() + " - " + publication.getType_print() + publication.toString() + ".\n");
+            System.out.println(publication.getThis_id() + " - " + publication.getType_print() + publication.toString() + ".\n");
         }
         //
     }

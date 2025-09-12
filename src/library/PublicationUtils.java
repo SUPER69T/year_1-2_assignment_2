@@ -1,7 +1,5 @@
 package library;
 
-import com.sun.source.tree.BreakTree;
-
 public class PublicationUtils {
     public static Publication[] sort_Publications_Arr(Publication[] pub_Array) {
         int actual_Arr_Length = 0;
@@ -57,5 +55,10 @@ public class PublicationUtils {
         new_Pub_Array[pub_Array.length] = publication;
         publication.setQty(publication.getQty() - 1);  //removing one from the library's Publication.Qty count.
         return new_Pub_Array;
+    }
+    public static Publication find_Publication(int publication_ID) {  //the finding of the Publication by ID relies on the publications-array being well-ordered in terms of not skipping places.
+        for(Publication pub : MainPublication2.()) {
+            if(pub.getThis_id() == publication_ID) return pub;
+        }
     }
 }

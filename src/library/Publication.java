@@ -5,20 +5,20 @@ public class Publication {
     private String publication;
     private int qty;
     private static int Pub_def_id = 9;
-    final int def_id;
+    final int this_id;
     public Publication(String title, String publication, int qty) {  //regular constructor.
         this.title = title;
         this.publication = publication;
         this.qty = qty;
         Pub_def_id++;
-        this.def_id = Pub_def_id;
+        this.this_id = Pub_def_id;
     }
 
     //getters:
     public String getTitle() {return title;}
     public String getPublication() {return publication;}
     public int getQty() {return qty;}
-    public int getDef_id() {return def_id;}
+    public int getThis_id() {return this_id;}
     public static int getLastID() {return Pub_def_id;}
     public String getName() {return title;}
     public String getType_print() {
