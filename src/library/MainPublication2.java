@@ -1,7 +1,7 @@
 package library;
 
 public class MainPublication2 {
-    public static void main(String[] args) {  //I made a separate database class called: publication_DATABASE, to hold the Publication[]publications array for it to be able to be used in the Students main.
+    public static void main(String[] args) {  //I made a separate database class called: publication_DATABASE, to hold the Publication[]publications array for it to be able to be used in the MainStudents class.
         //סעיפים ד-ה'
         System.out.println("List of publications in the order they were entered: \n");
         for (int i = 0; i < publication_DATABASE.get_Arr_Length(); i++) {

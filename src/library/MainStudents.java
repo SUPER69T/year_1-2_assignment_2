@@ -11,9 +11,9 @@ public class MainStudents {
         students[1] = new Student("Marie Curie");
         students[2] = new Student("Rosalind Franklin");
         students[3] = new Student("Stephen Hawking");
+
         //listStudents(students);  //סעיף ב'
         //first while loop - checking for student ID:
-
         int loops1 = 0;
         int student_ID_input = -1;
         while (true) {
@@ -65,7 +65,7 @@ public class MainStudents {
                     break;
                 }
                 if (10 > publication_ID || publication_ID > publication_DATABASE.get_Last_ID__from_DATABASE()) {  //
-                    System.out.println("No such publication ID exists, Please try again. getLastID() =" + publication_DATABASE.get_Last_ID__from_DATABASE());
+                    System.out.println("No such publication ID exists, Please try again.");
                     loops2++;
                     continue;
                 }
