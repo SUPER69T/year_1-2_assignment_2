@@ -30,6 +30,10 @@ public class Student {
         else if(publication.getQty() <= 0) {  //checking that the Publication quantity is at least 1.
             System.out.println("You have exceeded the limit of owned publications.");
         }
+        else if(getLoanedNum() == 0) {
+            borrowed_Publications = new Publication[]{publication};
+            setLoanedNum(this.getLoanedNum() + 1);
+        }
         else {
             borrowed_Publications = PublicationUtils.add_Publication(borrowed_Publications, publication);
             setLoanedNum(this.getLoanedNum() + 1);

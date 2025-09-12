@@ -51,8 +51,8 @@ public class MainStudents {
                     loops2++;
                     continue;
                 }
-                if (10 > publication_ID || publication_ID > Publication.getLastID()) {  //
-                    System.out.println("No such publication ID exists, Please try again. getLastID() =" + Publication.getLastID());
+                if (10 > publication_ID || publication_ID > publication_DATABASE.get_Last_ID__from_DATABASE()) {  //
+                    System.out.println("No such publication ID exists, Please try again. getLastID() =" + publication_DATABASE.get_Last_ID__from_DATABASE());
                     loops2++;
                     continue;
                 }
